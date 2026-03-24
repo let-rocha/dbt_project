@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: fct_orders
+    description: "Tabela de fatos contendo todos os pedidos da Olist com valores totais."
+    columns:
+      - name: order_id
+        description: "Chave primária do pedido."
+        tests:
+          - unique
+          - not_null

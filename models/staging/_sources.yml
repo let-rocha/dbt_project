@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: olist_raw
+    database: meu-projeto-dbt-490017
+    schema: raw_data
+    tables:
+      - name: orders        
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+
+      - name: customers     
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+          - name: customer_unique_id
+            tests:
+              - not_null
+
+      - name: order_items   
+        columns:
+          - name: order_id
+            tests:
+              - not_null
