@@ -6,15 +6,18 @@ O projeto explora o ciclo de vida da transformação de dados: desde a ingestão
 
 Para organizar o fluxo de dados, estruturei o projeto seguindo o conceito de camadas:
 1. Staging
+
 Lugar dos dados brutos (raw)
 Casting de tipos de dados
 Limpeza inicial e remoção de duplicatas.
 
 2. Intermediate
+
 Joins entre diferentes fontes de dados de staging
 Aplicação de regras de negócio
 
-3. Marts
+5. Marts
+
 Modelagem dimensional com tabelas fato e dimensão
 Dados prontos para consumo por ferramentas de BI
 
